@@ -1,0 +1,670 @@
+# Master .gitignore - Universal Development Environment
+# Combines patterns for Java, JavaScript/Node.js, Next.js, React, Express.js, MongoDB, Python, C, and C++
+
+# ================================
+# COMPILED FILES & EXECUTABLES
+# ================================
+
+# Java compiled files
+*.class
+
+# C/C++ object files and executables
+*.d
+*.o
+*.ko
+*.obj
+*.elf
+*.slo
+*.lo
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# C/C++ precompiled headers
+*.gch
+*.pch
+
+# C/C++ libraries
+*.lib
+*.a
+*.la
+*.lai
+*.so
+*.so.*
+*.dylib
+*.dll
+
+# C/C++ linker output
+*.ilk
+*.map
+*.exp
+
+# Fortran module files
+*.mod
+*.smod
+
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ================================
+# LOGS & DEBUG FILES
+# ================================
+
+# General logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Java specific logs
+*.ctxt
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Java VM crash logs
+hs_err_pid*
+replay_pid*
+
+# Node.js diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# ================================
+# PACKAGE & DISTRIBUTION FILES
+# ================================
+
+# Java packages
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Python distribution
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Node.js packages
+*.tgz
+
+# ================================
+# DEPENDENCY DIRECTORIES
+# ================================
+
+# Node.js
+/node_modules
+node_modules/
+/.pnp
+.pnp.js
+jspm_packages/
+bower_components/
+
+# Python virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Java Mobile Tools
+.mtj.tmp/
+
+# Snowpack
+web_modules/
+
+# ================================
+# BUILD & OUTPUT DIRECTORIES
+# ================================
+
+# Next.js
+/.next/
+.next
+/out/
+out
+
+# React build outputs
+build/
+dist/
+
+# Create React App
+# public/
+
+# React storybook
+storybook-static/
+
+# General build directories
+/build
+build/
+/coverage
+coverage
+
+# Nuxt.js
+.nuxt
+.output
+
+# Gatsby
+.cache/
+
+# Vuepress
+.vuepress/dist
+.temp
+**/.vitepress/dist
+**/.vitepress/cache
+
+# Docusaurus
+.docusaurus
+
+# C/C++ build artifacts
+build/Release
+
+# Kernel module compile results
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Sphinx documentation
+docs/_build/
+
+# ================================
+# CACHE & TEMPORARY FILES
+# ================================
+
+# Node.js caches
+.npm
+.eslintcache
+.stylelintcache
+.cache
+.parcel-cache
+
+# TypeScript cache
+*.tsbuildinfo
+next-env.d.ts
+
+# React Fast Refresh
+.swc/
+
+# Bundle analyzer
+.next-bundle-analyzer/
+
+# Webpack Bundle Analyzer
+webpack-bundle-analyzer-report.html
+
+# Python caches
+.tox/
+.nox/
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Sveltekit
+.svelte-kit/
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+.vite/
+
+# ================================
+# ENVIRONMENT & CONFIG FILES
+# ================================
+
+# Environment files
+.env
+.env.*
+.env*.local
+.env.development
+.env.production
+.env.test
+!.env.example
+
+# Database connection strings and credentials
+.env.database
+.env.mongo
+.env.db
+config/database.json
+config/db.json
+
+# Express.js session files
+sessions/
+
+# SSL certificates and keys
+*.key
+*.crt
+*.pem
+cert/
+certs/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Directory for instrumented libs
+lib-cov
+
+# Optional REPL history
+.node_repl_history
+
+# Yarn Integrity file
+.yarn-integrity
+
+# pyenv
+# .python-version
+
+# pipenv
+#Pipfile.lock
+
+# UV
+#uv.lock
+
+# poetry
+#poetry.lock
+
+# pdm
+#pdm.lock
+.pdm.toml
+.pdm-python
+.pdm-build/
+
+# PEP 582
+__pypackages__/
+
+# PyPI configuration
+.pypirc
+
+# ================================
+# TESTING & COVERAGE
+# ================================
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+cover/
+*.lcov
+.nyc_output
+
+# Jest
+__tests__/__snapshots__/
+.jest/
+
+# React Testing Library
+.react-testing-library/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
+# ================================
+# FRAMEWORK & TOOL SPECIFIC
+# ================================
+
+# Vercel
+.vercel
+
+# Netlify
+.netlify
+
+# Firebase
+.firebase/
+
+# Serverless
+.serverless/
+
+# FuseBox
+.fusebox/
+
+# DynamoDB Local
+.dynamodb/
+
+# MongoDB
+*.mongodb
+*.db
+*.lock
+
+# MongoDB data directories
+data/
+db/
+mongo-data/
+mongodb-data/
+
+# MongoDB logs
+mongod.log
+mongodb.log
+
+# MongoDB profiler output
+system.profile
+
+# MongoDB repair files
+mongod.lock
+WiredTiger*
+_mdb_catalog.wt
+collection-*.wt
+index-*.wt
+journal/
+diagnostic.data/
+
+# Compass (MongoDB GUI)
+.mongodb/
+
+# TernJS
+.tern-port
+
+# VSCode testing
+.vscode-test
+
+# Grunt
+.grunt
+
+# node-waf
+.lock-wscript
+
+# React Native
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# Xcode
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+project.xcworkspace
+
+# Android/IntelliJ
+build/
+.idea
+.gradle
+local.properties
+*.iml
+*.hprof
+
+# Flipper
+flipper-dump.txt
+
+# Bundle artifacts
+*.jsbundle
+
+# CocoaPods
+Pods/
+
+# Expo
+.expo/
+web-build/
+
+# @generated expo-cli sync
+# The following patterns were generated by expo-cli
+
+# OSX
+#
+.DS_Store
+
+# Express.js specific
+# Server logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Directory for instrumented libs generated by jscoverage/JSCover
+lib-cov
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Grunt intermediate storage
+.grunt
+
+# Compiled binary addons
+build/Release
+
+# Dependency directory
+node_modules
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# 0x
+profile-*
+
+# mac files
+.DS_Store
+
+# vim swap files
+*.swp
+
+# webstorm
+.idea/
+
+# vscode
+.vscode/
+*.code-workspace
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Uploaded files (if using file upload middleware)
+uploads/
+public/uploads/
+
+# Database dumps and backups
+*.dump
+*.bson
+*.json.gz
+backups/
+dump/
+exports/
+imports/
+
+# MongoDB Atlas local development
+.atlas/
+
+# Database seeds (uncomment if you don't want to track seed files)
+# seeds/
+# seeders/
+
+# Database migrations (uncomment if you don't want to track migrations)
+# migrations/
+
+# Yarn v3
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# ================================
+# DATABASE SPECIFIC
+# ================================
+
+# MongoDB local development
+*.mongodb
+*.db
+mongod.log
+mongodb.log
+
+# SQLite
+*.sqlite
+*.sqlite3
+*.db
+*.db3
+*.s3db
+*.sl3
+
+# MySQL
+*.sql
+
+# PostgreSQL
+*.pgsql
+
+# Database configuration (sensitive)
+# config/database.yml
+# config/database.json
+
+# ================================
+# PYTHON SPECIFIC
+# ================================
+
+# Django
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask
+instance/
+.webassets-cache
+
+# Scrapy
+.scrapy
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath
+*.sage.py
+
+# Translations
+*.mo
+*.pot
+
+# Spyder
+.spyderproject
+.spyproject
+
+# Rope
+.ropeproject
+
+# mkdocs
+/site
+
+# Cython
+cython_debug/
+
+# PyCharm
+#.idea/
+
+# ================================
+# INSTALLER LOGS
+# ================================
+
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ================================
+# SYSTEM FILES
+# ================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# SSL certificates
+*.pem
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+*.code-workspace
+.idea/
