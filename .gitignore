@@ -5,6 +5,8 @@
 # COMPILED FILES & EXECUTABLES
 # ================================
 
+!data/
+
 # Java compiled files
 *.class
 
@@ -388,7 +390,7 @@ playwright/.cache/
 *.lock
 
 # MongoDB data directories
-data/
+
 db/
 mongo-data/
 mongodb-data/
