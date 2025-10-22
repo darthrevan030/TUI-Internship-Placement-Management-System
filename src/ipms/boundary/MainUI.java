@@ -61,15 +61,12 @@ public class MainUI {
         int choice = InputValidator.getIntInput(scanner, "Enter choice: ", 1, 3);
 
         switch (choice) {
-            case 1:
-                handleLogin();
-                break;
-            case 2:
-                handleCompanyRepRegistration();
-                break;
-            case 3:
+            case 1 -> handleLogin();
+            case 2 -> handleCompanyRepRegistration();
+            case 3 -> {
                 System.out.println("\nThank you for using IPMS. Goodbye!");
                 System.exit(0);
+            }
         }
     }
 
