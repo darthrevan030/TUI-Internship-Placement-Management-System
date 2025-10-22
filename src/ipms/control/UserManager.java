@@ -12,7 +12,7 @@ import java.util.*;
 public class UserManager {
     private static UserManager instance;
     private Map<String, User> users;
-    private static final String USERS_FILE = "data/users.dat";
+    private static final String USERS_FILE = "src/data/users.dat";
 
     private UserManager() {
         this.users = new HashMap<>();
@@ -59,9 +59,9 @@ public class UserManager {
      */
     private void initializeFromCSV() {
         // Load students
-        loadStudentsFromCSV("data/sample_student_list.csv");
+        loadStudentsFromCSV("src/data/sample_student_list.csv");
         // Load staff
-        loadStaffFromCSV("data/sample_staff_list.csv");
+        loadStaffFromCSV("src/data/sample_staff_list.csv");
 
         System.out.println("Initialized " + users.size() + " users from CSV files.");
         saveUsers();
@@ -191,8 +191,7 @@ public class UserManager {
     public List<CompanyRepresentative> getPendingRepresentatives() {
         List<CompanyRepresentative> pending = new ArrayList<>();
         for (User user : users.values()) {
-            if (user instanceof CompanyRepresentative) {
-                CompanyRepresentative rep = (CompanyRepresentative) user;
+            if (user instanceof CompanyRepresentative rep) {
                 if (!rep.isApproved()) {
                     pending.add(rep);
                 }
