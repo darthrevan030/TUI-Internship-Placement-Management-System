@@ -3,7 +3,6 @@ package ipms.boundary;
 
 import ipms.control.*;
 import ipms.entity.*;
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -27,30 +26,6 @@ public class MainUI {
         System.out.println("\n" + "=".repeat(60));
         System.out.println("  INTERNSHIP PLACEMENT MANAGEMENT SYSTEM");
         System.out.println("=".repeat(60));
-
-        // Debug: Use getUsersByType instead of getAllUsers
-        System.out.println("\n=== SYSTEM INITIALIZATION DEBUG ===");
-        List<User> allUsers = userManager.getUsersByType(User.class);
-        System.out.println("Number of users loaded: " + allUsers.size());
-        System.out.println("\nUsers in system:");
-        
-        System.out.println("\nSTUDENTS:");
-        for (User u : userManager.getUsersByType(Student.class)) {
-            Student s = (Student) u;
-            System.out.println("  - " + s.getUserID() + " | " + s.getName() + " | Year " + s.getYearOfStudy() + " | " + s.getMajor());
-        }
-        
-        System.out.println("\nSTAFF:");
-        for (User u : userManager.getUsersByType(CareerCenterStaff.class)) {
-            System.out.println("  - " + u.getUserID() + " | " + u.getName());
-        }
-        
-        System.out.println("\nCOMPANY REPS:");
-        for (User u : userManager.getUsersByType(CompanyRepresentative.class)) {
-            CompanyRepresentative cr = (CompanyRepresentative) u;
-            System.out.println("  - " + cr.getUserID() + " | " + cr.getName() + " | Approved: " + cr.isApproved());
-        }
-        System.out.println("===================================\n");
 
         while (true) {
             if (!authManager.isLoggedIn()) {
