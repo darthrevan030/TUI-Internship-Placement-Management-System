@@ -107,7 +107,8 @@ ipms/
 cd src
 
 # Compile all Java files
-javac ipms/**/*.java -d ../bin
+javac ipms/**/*.java -d ../bin #in bash
+javac (Get-ChildItem -Recurse ipms -Filter *.java).FullName -d ../bin # in powershell
 
 # Verify compilation
 ls ../bin/ipms
@@ -137,11 +138,8 @@ ls ../bin/ipms
 ### From Command Line:
 
 ```bash
-# Navigate to bin directory
-cd bin
-
 # Run the application
-java ipms.boundary.MainUI
+java -cp bin ipms.boundary.MainUI
 ```
 
 ### From IDE:
@@ -367,11 +365,11 @@ This project is for educational purposes as part of the SC2002 course assignment
 ```bash
 # 1. Compile
 cd src
-javac ipms/**/*.java -d ../bin
+javac ipms/**/*.java -d ../bin # for bash
+javac (Get-ChildItem -Recurse ipms -Filter *.java).FullName -d ../bin # for powershell
 
 # 2. Run
-cd bin
-java ipms.boundary.MainUI
+java -cp bin ipms.boundary.MainUI
 
 # 3. Login as Student
 # User ID: U1234567A
