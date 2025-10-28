@@ -179,8 +179,9 @@ public class InternshipOpportunity implements Serializable {
             return false;
         }
 
-        // If not open or not visible, check if student already applied
-        if (!isOpen() || !isVisible) {
+        // Check if internship is approved and visible, or if student already applied
+        if (status != OpportunityStatus.APPROVED && status != OpportunityStatus.FILLED) {
+            // If not approved, check if student already applied
             for (Application app : applications) {
                 if (app.getStudent().getUserID().equals(student.getUserID())) {
                     return true; // Can still view if already applied
@@ -189,8 +190,30 @@ public class InternshipOpportunity implements Serializable {
             return false;
         }
 
+        // If not visible, check if student already applied
+        if (!isVisible) {
+            for (Application app : applications) {
+                if (app.getStudent().getUserID().equals(student.getUserID())) {
+                    return true; // Can still view if already applied
+                }
+            }
+            return false;
+        }
+
+        // Check if slots are available (for open status)
+        if (filledSlots >= numSlots) {
+            return false;
+        }
+
+        // Check if still within application period
+        LocalDate today = LocalDate.now();
+        if (today.isBefore(openingDate) || today.isAfter(closingDate)) {
+            return false;
+        }
+
         return true;
     }
+
 
     /**
      * Adds an application to this internship.

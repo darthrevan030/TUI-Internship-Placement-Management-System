@@ -319,7 +319,7 @@ public class StaffUI {
     }
 
     private FilterStrategy createMajorFilter() {
-        String major = InputValidator.getStringInput(scanner, "\nEnter major (e.g., CSC, EEE): ");
+        String major = InputValidator.getStringInput(scanner, "\nEnter major (Full Name e.g. Computer Science, Data Science & AI): ");
         return new MajorFilter(major);
     }
 

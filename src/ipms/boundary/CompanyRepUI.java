@@ -79,7 +79,7 @@ public class CompanyRepUI {
         int levelChoice = InputValidator.getIntInput(scanner, "Enter choice: ", 1, 3);
         InternshipLevel level = InternshipLevel.values()[levelChoice - 1];
 
-        String preferredMajor = InputValidator.getStringInput(scanner, "Preferred Major (e.g., CSC, EEE): ");
+        String preferredMajor = InputValidator.getStringInput(scanner, "Preferred Major (Full Name e.g. Computer Science, Data Science & AI): ");
 
         LocalDate openingDate = InputValidator.getDateInput(scanner, "Opening Date");
         LocalDate closingDate = InputValidator.getDateInput(scanner, "Closing Date");
