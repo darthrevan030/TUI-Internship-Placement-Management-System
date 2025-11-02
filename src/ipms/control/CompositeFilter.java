@@ -8,7 +8,7 @@ import java.util.*;
  * Composite filter that applies multiple filters in sequence
  */
 public class CompositeFilter implements FilterStrategy {
-    private List<FilterStrategy> filters;
+    private final List<FilterStrategy> filters;
 
     public CompositeFilter() {
         this.filters = new ArrayList<>();

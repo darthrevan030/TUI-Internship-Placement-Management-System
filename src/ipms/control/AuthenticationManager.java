@@ -9,7 +9,7 @@ import ipms.entity.*;
 public class AuthenticationManager {
     private static AuthenticationManager instance;
     private User currentUser;
-    private UserManager userManager;
+    private final UserManager userManager;
     
     /**
      * Private constructor for Singleton pattern.
@@ -46,8 +46,7 @@ public class AuthenticationManager {
         }
         
         // Check if company rep is approved
-        if (user instanceof CompanyRepresentative) {
-            CompanyRepresentative rep = (CompanyRepresentative) user;
+        if (user instanceof CompanyRepresentative rep) {
             if (!rep.isApproved()) {
                 System.out.println("Account pending approval from Career Center Staff.");
                 return null;

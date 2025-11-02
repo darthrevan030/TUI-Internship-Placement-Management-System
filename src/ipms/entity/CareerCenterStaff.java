@@ -7,8 +7,8 @@ package ipms.entity;
 public class CareerCenterStaff extends User {
     private static final long serialVersionUID = 1L;
 
-    private String staffDepartment;
-    private String email;
+    private final String staffDepartment;
+    private final String email;
 
     public CareerCenterStaff(String userID, String name, String password,
             String staffDepartment, String email) {

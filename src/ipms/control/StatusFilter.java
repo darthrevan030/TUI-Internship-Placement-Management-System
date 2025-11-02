@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
  * Implements Strategy pattern.
  */
 public class StatusFilter implements FilterStrategy {
-    private OpportunityStatus status;
+    private final OpportunityStatus status;
     
     /**
      * Constructor for StatusFilter.

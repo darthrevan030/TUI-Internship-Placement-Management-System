@@ -12,8 +12,8 @@ public class Student extends User {
     
     private int yearOfStudy;
     private String major;
-    private String email;
-    private List<Application> applications;
+    private final String email;
+    private final List<Application> applications;
     private Application acceptedPlacement;
     
     /**

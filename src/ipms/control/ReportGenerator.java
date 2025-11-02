@@ -2,15 +2,15 @@
 package ipms.control;
 
 import ipms.entity.*;
-import java.util.*;
 import java.time.LocalDate;
+import java.util.*;
 
 /**
  * Generates various reports for Career Center Staff
  */
 public class ReportGenerator {
-    private InternshipManager internshipManager;
-    private ApplicationManager applicationManager;
+    private final InternshipManager internshipManager;
+    private final ApplicationManager applicationManager;
 
     public ReportGenerator() {
         this.internshipManager = InternshipManager.getInstance();

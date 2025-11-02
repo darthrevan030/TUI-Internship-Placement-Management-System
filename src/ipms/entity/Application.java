@@ -9,11 +9,11 @@ import java.time.LocalDate;
 public class Application implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    private String applicationID;
-    private Student student;
-    private InternshipOpportunity opportunity;
+    private final String applicationID;
+    private final Student student;
+    private final InternshipOpportunity opportunity;
     private ApplicationStatus status;
-    private LocalDate applicationDate;
+    private final LocalDate applicationDate;
     private WithdrawalRequest withdrawalRequest;
 
     /**

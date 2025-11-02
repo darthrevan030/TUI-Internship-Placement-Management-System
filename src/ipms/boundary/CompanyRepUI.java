@@ -10,11 +10,11 @@ import java.util.*;
  * User interface for Company Representative operations
  */
 public class CompanyRepUI {
-    private CompanyRepresentative representative;
-    private Scanner scanner;
-    private InternshipManager internshipManager;
-    private ApplicationManager applicationManager;
-    private AuthenticationManager authManager;
+    private final CompanyRepresentative representative;
+    private final Scanner scanner;
+    private final InternshipManager internshipManager;
+    private final ApplicationManager applicationManager;
+    private final AuthenticationManager authManager;
 
     public CompanyRepUI(CompanyRepresentative representative, Scanner scanner) {
         this.representative = representative;
@@ -33,27 +33,16 @@ public class CompanyRepUI {
             int choice = InputValidator.getIntInput(scanner, "\nEnter choice: ", 1, 7);
 
             switch (choice) {
-                case 1:
-                    createInternshipOpportunity();
-                    break;
-                case 2:
-                    viewMyInternships();
-                    break;
-                case 3:
-                    viewApplications();
-                    break;
-                case 4:
-                    reviewApplications();
-                    break;
-                case 5:
-                    toggleVisibility();
-                    break;
-                case 6:
-                    changePassword();
-                    break;
-                case 7:
+                case 1 -> createInternshipOpportunity();
+                case 2 -> viewMyInternships();
+                case 3 -> viewApplications();
+                case 4 -> reviewApplications();
+                case 5 -> toggleVisibility();
+                case 6 -> changePassword();
+                case 7 -> {
                     authManager.logout();
                     return;
+                }
             }
         }
     }

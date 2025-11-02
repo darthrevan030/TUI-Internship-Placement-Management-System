@@ -9,12 +9,12 @@ import java.util.*;
 public class CompanyRepresentative extends User {
     private static final long serialVersionUID = 1L;
     
-    private String companyName;
-    private String department;
-    private String position;
-    private String email;
+    private final String companyName;
+    private final String department;
+    private final String position;
+    private final String email;
     private boolean isApproved;
-    private List<InternshipOpportunity> createdInternships;
+    private final List<InternshipOpportunity> createdInternships;
     
     public CompanyRepresentative(String userID, String name, String password,
                                 String companyName, String department, 

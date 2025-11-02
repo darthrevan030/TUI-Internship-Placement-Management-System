@@ -9,11 +9,11 @@ import java.util.*;
  * User interface for Student operations
  */
 public class StudentUI {
-    private Student student;
-    private Scanner scanner;
-    private InternshipManager internshipManager;
-    private ApplicationManager applicationManager;
-    private AuthenticationManager authManager;
+    private final Student student;
+    private final Scanner scanner;
+    private final InternshipManager internshipManager;
+    private final ApplicationManager applicationManager;
+    private final AuthenticationManager authManager;
 
     public StudentUI(Student student, Scanner scanner) {
         this.student = student;
@@ -32,27 +32,16 @@ public class StudentUI {
             int choice = InputValidator.getIntInput(scanner, "\nEnter choice: ", 1, 7);
 
             switch (choice) {
-                case 1:
-                    viewInternshipOpportunities();
-                    break;
-                case 2:
-                    applyForInternship();
-                    break;
-                case 3:
-                    viewMyApplications();
-                    break;
-                case 4:
-                    acceptPlacement();
-                    break;
-                case 5:
-                    requestWithdrawal();
-                    break;
-                case 6:
-                    changePassword();
-                    break;
-                case 7:
+                case 1 -> viewInternshipOpportunities();
+                case 2 -> applyForInternship();
+                case 3 -> viewMyApplications();
+                case 4 -> acceptPlacement();
+                case 5 -> requestWithdrawal();
+                case 6 -> changePassword();
+                case 7 -> {
                     authManager.logout();
                     return;
+                }
             }
         }
     }

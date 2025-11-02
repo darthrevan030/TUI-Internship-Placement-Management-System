@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class LevelFilter implements FilterStrategy {
-    private InternshipLevel level;
+    private final InternshipLevel level;
 
     public LevelFilter(InternshipLevel level) {
         this.level = level;

@@ -10,20 +10,20 @@ import java.util.*;
 public class InternshipOpportunity implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    private String opportunityID;
-    private String title;
-    private String description;
-    private InternshipLevel level;
-    private String preferredMajor;
-    private LocalDate openingDate;
-    private LocalDate closingDate;
+    private final String opportunityID;
+    private final String title;
+    private final String description;
+    private final InternshipLevel level;
+    private final String preferredMajor;
+    private final LocalDate openingDate;
+    private final LocalDate closingDate;
     private OpportunityStatus status;
-    private String companyName;
-    private CompanyRepresentative representative;
-    private int numSlots;
+    private final String companyName;
+    private final CompanyRepresentative representative;
+    private final int numSlots;
     private int filledSlots;
     private boolean isVisible;
-    private List<Application> applications;
+    private final List<Application> applications;
 
     /**
      * Constructor for InternshipOpportunity.

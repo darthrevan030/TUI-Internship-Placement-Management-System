@@ -9,7 +9,7 @@ import java.util.*;
  * Manages all users in the system
  * Implements SINGLETON pattern
  */
-public class UserManager {
+public final class UserManager {
     private static UserManager instance;
     private Map<String, User> users;
     private static final String USERS_FILE = "src/data/users.dat";

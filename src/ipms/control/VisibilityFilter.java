@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class VisibilityFilter implements FilterStrategy {
-    private boolean visible;
+    private final boolean visible;
 
     public VisibilityFilter(boolean visible) {
         this.visible = visible;

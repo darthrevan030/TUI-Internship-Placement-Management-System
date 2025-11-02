@@ -9,13 +9,13 @@ import java.util.*;
  * User interface for Career Center Staff operations
  */
 public class StaffUI {
-    private CareerCenterStaff staff;
-    private Scanner scanner;
-    private UserManager userManager;
-    private InternshipManager internshipManager;
-    private ApplicationManager applicationManager;
-    private AuthenticationManager authManager;
-    private ReportGenerator reportGenerator;
+    private final CareerCenterStaff staff;
+    private final Scanner scanner;
+    private final UserManager userManager;
+    private final InternshipManager internshipManager;
+    private final ApplicationManager applicationManager;
+    private final AuthenticationManager authManager;
+    private final ReportGenerator reportGenerator;
 
     public StaffUI(CareerCenterStaff staff, Scanner scanner) {
         this.staff = staff;
@@ -36,27 +36,16 @@ public class StaffUI {
             int choice = InputValidator.getIntInput(scanner, "\nEnter choice: ", 1, 7);
 
             switch (choice) {
-                case 1:
-                    approveCompanyRepresentatives();
-                    break;
-                case 2:
-                    approveInternshipOpportunities();
-                    break;
-                case 3:
-                    approveWithdrawalRequests();
-                    break;
-                case 4:
-                    generateReports();
-                    break;
-                case 5:
-                    viewAllInternships();
-                    break;
-                case 6:
-                    changePassword();
-                    break;
-                case 7:
+                case 1 -> approveCompanyRepresentatives();
+                case 2 -> approveInternshipOpportunities();
+                case 3 -> approveWithdrawalRequests();
+                case 4 -> generateReports();
+                case 5 -> viewAllInternships();
+                case 6 -> changePassword();
+                case 7 -> {
                     authManager.logout();
                     return;
+                }
             }
         }
     }
@@ -270,24 +259,12 @@ public class StaffUI {
         FilterStrategy filter = null;
 
         switch (filterChoice) {
-            case 1:
-                filter = null; // No filter
-                break;
-            case 2:
-                filter = createStatusFilter();
-                break;
-            case 3:
-                filter = createLevelFilter();
-                break;
-            case 4:
-                filter = createMajorFilter();
-                break;
-            case 5:
-                filter = createVisibilityFilter();
-                break;
-            case 6:
-                filter = createCompositeFilter();
-                break;
+            case 1 -> filter = null; // No filter
+            case 2 -> filter = createStatusFilter();
+            case 3 -> filter = createLevelFilter();
+            case 4 -> filter = createMajorFilter();
+            case 5 -> filter = createVisibilityFilter();
+            case 6 -> filter = createCompositeFilter();
         }
 
         reportGenerator.generateInternshipReport(filter);

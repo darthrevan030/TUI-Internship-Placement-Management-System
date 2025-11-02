@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class MajorFilter implements FilterStrategy {
-    private String major;
+    private final String major;
 
     public MajorFilter(String major) {
         this.major = major;

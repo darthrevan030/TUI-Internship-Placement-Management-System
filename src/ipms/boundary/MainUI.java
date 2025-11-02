@@ -9,9 +9,9 @@ import java.util.Scanner;
  * Main user interface - entry point for the application
  */
 public class MainUI {
-    private Scanner scanner;
-    private AuthenticationManager authManager;
-    private UserManager userManager;
+    private final Scanner scanner;
+    private final AuthenticationManager authManager;
+    private final UserManager userManager;
 
     public MainUI() {
         this.scanner = new Scanner(System.in);
@@ -33,12 +33,12 @@ public class MainUI {
             } else {
                 User currentUser = authManager.getCurrentUser();
 
-                if (currentUser instanceof Student) {
-                    new StudentUI((Student) currentUser, scanner).displayMenu();
-                } else if (currentUser instanceof CompanyRepresentative) {
-                    new CompanyRepUI((CompanyRepresentative) currentUser, scanner).displayMenu();
-                } else if (currentUser instanceof CareerCenterStaff) {
-                    new StaffUI((CareerCenterStaff) currentUser, scanner).displayMenu();
+                switch (currentUser) {
+                    case Student student -> new StudentUI(student, scanner).displayMenu();
+                    case CompanyRepresentative companyRepresentative -> new CompanyRepUI(companyRepresentative, scanner).displayMenu();
+                    case CareerCenterStaff careerCenterStaff -> new StaffUI(careerCenterStaff, scanner).displayMenu();
+                    default -> {
+                    }
                 }
 
                 // Check if still logged in (user might have logged out)
@@ -100,8 +100,7 @@ public class MainUI {
             boolean passwordMatch = foundUser.verifyPassword(password);
             System.out.println("Password verification result: " + passwordMatch);
             
-            if (foundUser instanceof CompanyRepresentative) {
-                CompanyRepresentative rep = (CompanyRepresentative) foundUser;
+            if (foundUser instanceof CompanyRepresentative rep) {
                 System.out.println("CompanyRep approval status: " + rep.isApproved());
             }
         }
